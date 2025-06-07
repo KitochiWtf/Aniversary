@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Anniversary 10 Months 💗</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+    body {
+      margin: 0;
+      font-family: 'Sriracha', cursive;
+      background: linear-gradient(to bottom, #ffe4ec, #fff8f0);
+      overflow-x: hidden;
+    }
+    .container {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .title {
+      text-align: center;
+      font-size: 2em;
+      margin-top: 20px;
+      color: #d95f91;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #555;
+    }
+    .img-box {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .img-box img {
+      width: 80%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .message-box {
+      background-color: rgba(255,255,255,0.8);
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 1s ease;
+    }
+    .message-box.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .typewriter {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #000;
+      animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: black }
+    }
+    .heart {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center;
+      background-size: contain;
+      animation: float 4s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+    #countdown {
+      font-size: 1.5rem;
+      color: #d147a3;
+      margin: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="sakura"></canvas>
+  <div class="container">
+    <div class="title">💛 Int & Ten 💛</div>
+    <div class="subtitle">7 June 2025</div>
+
+    <div class="img-box">
+      <img src="IMG_2818.jpg" alt="รูปของเรา">
+    </div>
+    <div class="img-box">
+      <img src="IMG_2331.jpg" alt="รูปที่สอง">
+    </div>
+    <div class="img-box">
+      <img src="IMG_2301.jpg" alt="รูปที่สาม">
+    </div>
+    <div class="img-box">
+      <img src="IMG_2271.jpg" alt="ภาพที่สี่ของเรา">
+    </div>
+
+    <div class="message-box typewriter">เราเริ่มต้นจากคนแปลกหน้า กลายมาเป็นคนรู้ใจ ทุกโมเมนต์ของเราคือความทรงจำที่สวยงามเสมอ</div>
+    <div class="message-box typewriter">รักของเราคือความเข้าใจ การเติบโต และการอยู่เคียงข้าง ไม่ว่าจะทุกข์หรือสุข แค่มีเธออยู่ ก็พอแล้ว</div>
+    <div class="message-box typewriter">ขอบคุณที่ไม่เคยปล่อยมือกัน ขอบคุณที่อดทนและเรียนรู้กัน ขอบคุณที่เป็น บี๋และเค้า 🥹💖</div>
+    <div class="message-box typewriter">ไม่ว่าจะกี่วัน กี่ปี เค้าจะยังคงเลือกบี๋ และรักบี๋แบบนี้ ตลอดไป ถึงแม้ว่าเค้าจะทำตัวไม่ดี ทำตัวไม่น่ารัก ทำนิสัยแย่ๆมาเยอะบ้าง</div>
+    <div class="message-box typewriter">แต่เค้าก็รักบี๋นะ อยากอยู่กับบี๋ไปตลอด อะไรที่ไม่ดีเค้าขอโทษนะ จับมือผ่านไปด้วยกันนะ</div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <iframe width="300" height="200" src="https://www.youtube.com/embed/OYPiXBIgvJ8?autoplay=1&mute=1&loop=1&playlist=OYPiXBIgvJ8" 
+              frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+
+  <script>
+    setInterval(() => {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = '100vh';
+      heart.style.animationDuration = (3 + Math.random() * 2) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }, 400);
+
+    const boxes = document.querySelectorAll('.message-box');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.5 });
+    boxes.forEach(box => observer.observe(box));
+
+    // กลีบดอกไม้โปรย
+    const canvas = document.getElementById("sakura");
+    const ctx = canvas.getContext("2d");
+    let petals = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    function createPetal() {
+      return {
+        x: Math.random() * canvas.width,
+        y: -20,
+        r: Math.random() * 5 + 5,
+        d: Math.random() * 1 + 0.5
+      };
+    }
+
+    function drawPetals() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#fbcce7";
+      ctx.beginPath();
+      for (let i = 0; i < petals.length; i++) {
+        const p = petals[i];
+        ctx.moveTo(p.x, p.y);
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
+      }
+      ctx.fill();
+      updatePetals();
+    }
+
+    function updatePetals() {
+      for (let i = 0; i < petals.length; i++) {
+        const p = petals[i];
+        p.y += p.d;
+        p.x += Math.sin(p.y * 0.01);
+        if (p.y > canvas.height) {
+          petals[i] = createPetal();
+        }
+      }
+    }
+
+    function loop() {
+      drawPetals();
+      requestAnimationFrame(loop);
+    }
+
+    for (let i = 0; i < 50; i++) {
+      petals.push(createPetal());
+    }
+
+    loop();
+  </script>
+</body>
+</html>
